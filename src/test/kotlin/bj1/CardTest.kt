@@ -2,6 +2,7 @@ package bj1
 
 import org.junit.Test
 import kotlin.test.assertEquals
+import kotlin.test.fail
 
 class CardTest{
 
@@ -23,5 +24,19 @@ class CardTest{
         assertEquals("King", c2.valueName)
         assertEquals("King of Diamonds", c2.name)
         assertEquals(10, c2.points)
+
+        try {
+            Card(1, 5)
+            fail("Should never get here")
+        } catch (e: IllegalArgumentException) {
+
+        }
+
+        try {
+            Card(14, 1)
+            fail("Should never get here")
+        } catch (e: IllegalArgumentException) {
+
+        }
     }
 }
