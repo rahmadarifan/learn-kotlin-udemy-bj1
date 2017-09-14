@@ -73,3 +73,7 @@ dist
 .sass-cache
 bower_components
 webpackCache/
+src/main/java/
+src/main/resources/
+src/test/java/
+src/test/resources/
